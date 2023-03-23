@@ -1,6 +1,7 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.TextStyle;
+import java.util.Arrays;
 import java.util.Locale;
 
 public class Main {
@@ -67,5 +68,60 @@ public class Main {
         for (int i = 0; i <= 100; i+=5){ // vai de 0 à 100 de 5 em 5
             System.out.println(i);
         }
+
+        // Vetores
+        int[] numeros = new int[5];
+        numeros[0] = 1;
+        numeros[1] = 2;
+        numeros[2] = 3;
+        numeros[3] = 4;
+        numeros[4] = 5;
+
+        for (int num : numeros) { // para cada int num em numeros o exiba no terminal
+            System.out.println(num);
+        }
+
+
+        String[] letras = {"A", "B", "C", "D"};
+
+        for (int i = 0; i < letras.length; i++){
+            System.out.println(letras[i]);
+        }
+
+        System.out.println(Arrays.toString(letras));
+
+
+        int[] nums = {6, 8, 12, 4};
+        int maior = nums[0];
+        int menor = nums[0];
+        int media = 0;
+
+        for (int num : nums) {
+            if (num > maior) {
+                maior = num;
+            }
+
+            if (num < menor) {
+                menor = num;
+            }
+
+            media += num;
+        }
+
+        System.out.println(maior);
+        System.out.println(menor);
+        System.out.println(media / numeros.length);
+
+        //Funções
+        saudacao(nome);
+        System.out.println(soma(2, 3));
+    }
+
+    public static void saudacao(String nomeParametro){
+        System.out.println("Olá, " + nomeParametro);
+    }
+
+    public static int soma(int num1, int num2){
+        return num1 + num2;
     }
 }
